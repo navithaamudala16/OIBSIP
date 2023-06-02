@@ -1,0 +1,144 @@
+<html>
+
+<head>
+
+<title>cafes</title>
+
+</head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .card {
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card img {
+      width: 50%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .card img {
+      width: 50%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+  </style>
+
+<h1>Cafes</h1><div id="container"></div>
+
+<script>
+  // Data for cafes, cafe bars, and restaurants
+  var places = [
+    {
+      name: "Beluga",
+      type: "cafe",
+      image: "beluga.jpg",
+      image1:"belugamenu.jpg",
+      address: "Jubille Hils",
+      city: "Hyderabad"
+    },
+    {
+      name: "StarBugs",
+      type: "cafe",
+      image: "starbugs.jpg",
+      image1: "starbugs menu.jpg",
+      address: "Banjara Hills",
+      city: "Hyderabad"
+    },
+    {
+      name: "Niloufer",
+      type: "cafe",
+      image: "niloufer.jpg",
+      image1: "niloufermenu.jpg",
+      address: "Himayat Nagar",
+      city: "Hyderabad"
+    },
+    {
+      name: "Autumn leaf",
+      type: "cafe",
+      image: "autumn.jpg",
+      image1: "Autumnmenu.jpg",
+      address: "Jubille Hills",
+      city: "Hyderabad"
+    },
+    {
+      name: "Roastery",
+      type: "cafe",
+      image: "roastery.jpg",
+      image1: "roastarymenu.jpg",
+      address: "Banjara Hils",
+      city: "Hyderabad"
+    }
+  ];
+  
+
+  // Create cards for each place
+  var container = document.getElementById("container");
+  places.forEach(function(place) {
+    var card = document.createElement("div");
+    card.className = "card";
+
+    var image = document.createElement("img");
+    image.src = place.image;
+    card.appendChild(image);
+    var image1 = document.createElement("img");
+    image1.src = place.image1;
+    card.appendChild(image1);
+
+
+    var name = document.createElement("h2");
+    name.textContent = place.name;
+    card.appendChild(name);
+
+    var type = document.createElement("p");
+    type.textContent = "Type: " + place.type;
+    card.appendChild(type);
+
+    var address = document.createElement("p");
+    address.textContent = "Address: " + place.address;
+    card.appendChild(address);
+
+    var city = document.createElement("p");
+    city.textContent = "City: " + place.city;
+    card.appendChild(city);
+
+    container.appendChild(card);
+  });
+</script>
+<script>
+    function HomePage() {
+        window.location.href = "index.html";
+    }
+</script>
+</head>
+<body>
+    <button onclick="HomePage()">Go to Home</button>
+</body>
+</body>
+</html>
+
+
+</body>
+
+</html>
